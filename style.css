@@ -41,7 +41,6 @@ nav {
 }
 
 nav svg {
-    background-color: rgb(10,10,10);
     position: relative;
     cursor: pointer;
     z-index: 10;
