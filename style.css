@@ -41,8 +41,25 @@ nav {
 }
 
 nav svg {
+    background-color: rgb(10,10,10);
+    position: relative;
     cursor: pointer;
     z-index: 10;
+}
+
+nav svg::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%,-50%);
+    height: 100%;
+    width: 40%;
+    border-radius: 0.5rem;
+    background-color: rgb(62, 61, 61);
+    z-index: -1;
+    min-width: 100px;
+    padding: 20px;
 }
 
 .links{
@@ -124,15 +141,18 @@ nav svg {
     left: 50%;
     transform: translateX(-50%);
     height: 100%;
-    width: 70%;
+    width: 40%;
     border-radius: 0.5rem;
     background-color: rgb(62, 61, 61);
     z-index: -1;
-    min-width: 500px;
+    min-width: 300px;
+    padding: 20px;
 }
 
 .about h3 {
     font-family: monospace;
+    position: relative;
+    z-index: 2;
 }
 
 .ctas {
