@@ -1,4 +1,5 @@
-const burger = document.querySelector("nav svg")
+const burger = document.querySelector(".nav-icon")
+// gsap.set('body',{overflow:"hidden"})
 
 burger.addEventListener("click", () => {
     if(burger.classList.contains("active")){
@@ -23,7 +24,7 @@ videos.forEach((iframe) => {
         start:"top center",
         end:"bottom center",
         onEnter: () => {
-            gsap.to(iframe, {opacity: 1})
+            gsap.to(iframe, {opacity: 1})   
         }
     });
 });
