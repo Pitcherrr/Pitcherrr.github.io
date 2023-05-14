@@ -5,6 +5,7 @@ burger.addEventListener("click", () => {
     if(burger.classList.contains("active")){
         gsap.to(".links", {x: "100%"});
         gsap.set('body',{overflow:"auto"})
+        gsap.set('body',{overflowX:"hidden"})
     }else{
         gsap.to(".links", {x: "0%"});
         gsap.fromTo('.links a', {opacity:0},{opacity:1, delay:0.25, stagger:0.25})
@@ -23,8 +24,38 @@ videos.forEach((iframe) => {
         trigger:iframe,
         start:"top center",
         end:"bottom center",
+        markers: true,
         onEnter: () => {
             gsap.to(iframe, {opacity: 1})   
+            gsap.to(".clips", {opacity: 1})
         }
     });
 });
+
+window.onscroll = function() {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    var header = document.getElementById(".menu-bar");
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  }
+
+
+
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("mode");
+  var change = document.getElementById("dark-mode-button");
+  if (change.innerHTML == "Dark Mode")
+  {
+      change.innerHTML = "Light Mode";
+  }
+  else {
+      change.innerHTML = "Dark Mode";
+  }
+}
