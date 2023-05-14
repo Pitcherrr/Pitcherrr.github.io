@@ -17,37 +17,42 @@ burger.addEventListener("click", () => {
 //const videos = gsap.utils.toArray(".iframe");
 const videos = [".funny",".clips"];
 
-gsap.set(videos, {opacity:0});
+if (window.matchMedia('(max-width: 767px)').matches) {
+  // Code to execute when the screen width is <= 800px
+  console.log('Viewing on a smaller device');
+} else {
+  // Code to execute when the screen width is > 800px
+  gsap.set(videos, {opacity:0});
+  videos.forEach((iframe) => {
+      ScrollTrigger.create({
+          trigger:iframe,
+          start:"top center+=200",
+          end:"bottom center",
+          markers: true,
+          onEnter: () => {
+              gsap.to(iframe, {opacity: 1})   
+              gsap.to(".clips", {opacity: 1})
+          }
+      });
+  });
+}
 
-videos.forEach((iframe) => {
-    ScrollTrigger.create({
-        trigger:iframe,
-        start:"top center",
-        end:"bottom center",
-        markers: true,
-        onEnter: () => {
-            gsap.to(iframe, {opacity: 1})   
-            gsap.to(".clips", {opacity: 1})
-        }
-    });
-});
+// window.onscroll = function() {
+//     scrollFunction();
+//   };
 
-window.onscroll = function() {
-    scrollFunction();
-  };
-
-  function scrollFunction() {
-    var header = document.getElementById(".menu-bar");
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  }
+//   function scrollFunction() {
+//     var header = document.getElementById(".menu-bar");
+//     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+//       header.classList.add("scrolled");
+//     } else {
+//       header.classList.remove("scrolled");
+//     }
+//   }
 
 
 
-function myFunction() {
+function dark_mode() {
   var element = document.body;
   element.classList.toggle("mode");
   var change = document.getElementById("dark-mode-button");
