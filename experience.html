@@ -9,10 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./transitions.css">
     <link rel="shortcut icon" href="assets/detective_scaled.png">
     <title>Tom Pitcher</title>
 </head>
 <body>
+    <div class="transition transition-1 is-active"></div>
     <section class="experience-page">
         <nav>
             <div class="logo">
@@ -34,24 +36,60 @@
             <div class = "dark-mode">
                 <button id = "dark-mode-button" onclick="dark_mode()">Dark Mode</button>
             </div>
+
+            <div class="links">
+                <a href="/index.html">Home</a>
+                <a class = "active-2" href="/experience.html">Experience</a>
+                <a href="/projects.html">Projects</a>
+                <a href="/blog.html">Blog</a>
+            </div>
+            <div class = "nav-icon">
+                <svg
+                    width="44"
+                    height="18"
+                    viewBox="0 0 44 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                <line
+                    class="line"
+                    y1="1"
+                    x2="44"
+                    y2="1"
+                    stroke="white"
+                    stroke-width="2"
+                />
+                <line
+                    class="line"
+                    y1="9"
+                    x2="27"
+                    y2="9"
+                    stroke="white"
+                    stroke-width="2"
+                />
+                <line
+                    class="line"
+                    y1="17"
+                    x2="11"
+                    y2="17"
+                    stroke="white"
+                    stroke-width="2"
+                />
+                </svg>
+            </div>   
         </nav>
-        <!-- <div class="about">
-            <h2>Tom Pitcher</h2>
-            <h3>Mechatronics Engineer</h3>
-            <!-- <div class="ctas">
-                <button class="cta-sec">Click This</button>
-                <button class="cta-main">Click This</button>
-            </div> -->
-        <!-- </div> -->
         <div class="menu-bar-2">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="experience.html">Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li class="active"><a href="/experience.html">Experience</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/blog.html">Blog</a></li>
             </ul>
         </div>
     </section>
+    <div class = "dark-mode-ios">
+        <button id = "dark-mode-button" onclick="dark_mode()">Dark Mode</button>
+    </div>
     <div class = "exp-center">
         <section class="experience-body">
             <div>

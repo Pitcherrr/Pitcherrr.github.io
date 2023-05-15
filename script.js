@@ -2,7 +2,7 @@ const burger = document.querySelector(".nav-icon")
 // gsap.set('body',{overflow:"hidden"})
 
 burger.addEventListener("click", () => {
-    if(burger.classList.contains("active")){
+    if(burger.classList.contains("on")){
         gsap.to(".links", {x: "100%"});
         gsap.set('body',{overflow:"auto"})
         gsap.set('body',{overflowX:"hidden"})
@@ -11,7 +11,7 @@ burger.addEventListener("click", () => {
         gsap.fromTo('.links a', {opacity:0},{opacity:1, delay:0.25, stagger:0.25})
         gsap.set('body',{overflow:"hidden"})
     }
-    burger.classList.toggle("active")
+    burger.classList.toggle("on")
 });
 
 //const videos = gsap.utils.toArray(".iframe");
@@ -58,9 +58,35 @@ function dark_mode() {
   var change = document.getElementById("dark-mode-button");
   if (change.innerHTML == "Dark Mode")
   {
-      change.innerHTML = "Light Mode";
+    console.log('Changed text')
+    change.innerHTML = "Light Mode";
   }
   else {
-      change.innerHTML = "Dark Mode";
+    change.innerHTML = "Dark Mode";
   }
+}
+
+
+//code for transitions
+window.onload = () => {
+    const transition_el = document.querySelector('.transition');
+    //select only the anchors that link to internal pages
+    const anchors = document.querySelectorAll('a[href^="/"]'); 
+    setTimeout(() =>{
+        transition_el.classList.remove('is-active')
+    }, 300);
+
+    for (let i=0; i<anchors.length; i++) {
+        const anchor = anchors[i];
+        
+        anchor.addEventListener('click', e=> {
+            e.preventDefault();
+            let target = e.target.href;
+            transition_el.classList.add('is-active');
+
+            setTimeout(() => {
+                window.location.href = target;
+            }, 300)
+        })
+    }
 }
