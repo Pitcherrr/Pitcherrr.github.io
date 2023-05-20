@@ -119,7 +119,6 @@ a.active {
 }
 
 /* For in line about section within nav bar */
-
 .intro {
     position: relative; 
     font-family: "font", monospace;
@@ -230,32 +229,54 @@ a.active {
     color: var(--light);
 }
 
-.about img{
-    width: 80%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 500px;
-    margin-top: 2rem;
-}
-
 .about-text {
     width: 60%;
     min-width: 350px;
 }
 
-.media{
-    color: var(--main-color);
-    text-align: center;
-    font-family: 'font', monospace;
-    /* margin-top: -50vh; */
+.resume-button-wrapper {
+    width: 60%;
+    min-width: 350px;
+    align-items: start;
+    margin-top: 1rem;
+    /* justify-content: left; */
 }
-.media h3{
+
+.about button {
+    background-color: var(--light);
+    color: var(--secondary-color);
     font-family: monospace;
-    color: var(--light);
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    font-family: 'font', monospace;
+}
+
+.media-text {
+    width: 60%;
+    min-width: 350px;
+}
+
+.media img{
+    width: 60%;
+    max-width: 560px;
+    border-radius: 1rem;
+
 }
 
 .videos {
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -265,20 +286,12 @@ a.active {
     border-radius: 1rem;
     margin-top: 1rem;
 }
-.clips,
-.funny {
-    position: relative;
-}
 
-.videos h3{
-    color: antiquewhite;
-    position: absolute;
-    font-family: monospace;
-    text-shadow: 0px 2px 12px rgba(0,0,0, 0.4);
-    bottom: 10%;
-    left: 50%;
-    transform: translate(-50%,-10%);
-    font-size: 1rem;
+.video-1,
+.video-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Code of experience page #####################################################################################################*/
@@ -561,14 +574,6 @@ li.active::before {
     display: none;
 }
 
-.project-1-video.dd {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
 /* Drop down logic */
 .project-1-text.dd {
     display:flex;
@@ -595,10 +600,20 @@ li.active::before {
     gap: 2rem;
 }
 
+.project-1-video.dd {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-1-video.dd iframe{
+    border-radius: 1rem;
+}
+
 .project-1-img.dd svg {
     transform: rotate(180deg);
 }
-
 
 .project-2 {
     width: 80%;
@@ -666,6 +681,7 @@ li.active::before {
     background-color: rgba(0,0,0, 0.4);
 }
 
+/* drop down styling */
 .project-2-text.dd {
     display:flex;
     flex-direction: column;
@@ -689,6 +705,10 @@ li.active::before {
 
 .project-2-text.dd li{
     gap: 2rem;
+}
+
+.project-2-video.dd iframe{
+    border-radius: 1rem;
 }
 
 .project-2-img.dd svg {
@@ -786,6 +806,26 @@ li.active::before {
     transform: rotate(180deg);
 }
 
+/* Resume page styling ################################################################################ */
+.resume {
+    outline: red dashed 1px;
+    margin-top: 5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-pdf {
+    outline: red dashed 1px;
+    width: 80%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.resume iframe{
+    scale: 0.8;
+}
 
 /* Removeing elements only meant for mobile devices */
 .dark-mode-ios {
@@ -836,14 +876,6 @@ li.active::before {
         justify-content: center;
     }
 
-    .videos {
-        margin-top: 10px;
-        position: absolute;
-        scale: 0.6;
-        display: flex;
-        justify-content: center;
-    }
-
     .experience-body {
         margin-top: 0rem;
     }
@@ -851,18 +883,25 @@ li.active::before {
     .hk {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
 
     .uq {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 10px;
+    }
+
+    .uq img{
+        margin-top: 1rem;
     }
 
     .a-team {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
 
@@ -1009,7 +1048,7 @@ li.active::before {
 
 }
 
-
+/* transitions css */
 .transition-1{
     position: fixed;
     top: 0;

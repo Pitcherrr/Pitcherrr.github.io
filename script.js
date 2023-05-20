@@ -19,7 +19,7 @@ burger.addEventListener("click", () => {
 
 
 //Code for only showing youtube videos when viewing on larger devices
-const videos = [".funny",".clips"];
+const videos = [".video-1",".video-2"];
 if (window.matchMedia('(max-width: 767px)').matches) {
   // Code to execute when the screen width is <= 800px
   console.log('Viewing on a smaller device');
@@ -35,7 +35,7 @@ else {
           markers: false,
           onEnter: () => {
               gsap.to(iframe, {opacity: 1})   
-              gsap.to(".clips", {opacity: 1})
+              gsap.to(".video-2", {opacity: 1})
           }
       });
   });
@@ -85,7 +85,7 @@ window.onload = () => {
 //code for drop down
 function drop_down(n) {
     console.log("Drop down for element "+n)
-
+    // condition for when on the blog page
     if (n == 3) {
         console.log('blog dropdown')
         var element1 = document.querySelector('.blog-1-text');
@@ -97,10 +97,25 @@ function drop_down(n) {
         var element2 = document.querySelector('.project-' + n + '-img');
         var element3 = document.querySelector('.project-' + n + '-video');
         var elements = [element1, element2, element3];}
-
+    //loop over the elements and fade them in 
     for (let i=0; i<elements.length; i++) {
         var element = elements[i];
         element.classList.toggle("dd");
         gsap.to(element, {x: "0%"});
         gsap.fromTo(element, {opacity:0},{opacity:1, delay:0.25, stagger:0})
 }}
+
+// function scaleIframe() {
+//     var iframeContainer = document.getElementById('resume');
+//     var iframe = document.getElementById('resume-pdf');
+
+//     var containerWidth = iframeContainer.offsetWidth;
+//     var scaleFactor = containerWidth / 2000; // desiredIframeWidth is the desired width of the iframe
+
+//     iframe.style.width = containerWidth + 'px';
+//     iframe.style.height = (scaleFactor * 2) + 'px'; // desiredIframeHeight is the desired height of the iframe
+//   }
+
+//   // Call the scaleIframe function on page load and whenever the window is resized
+//   window.addEventListener('load', scaleIframe);
+//   window.addEventListener('resize', scaleIframe);
