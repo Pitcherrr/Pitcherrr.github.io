@@ -17,7 +17,7 @@
     <div class="transition transition-1 is-active"></div>
     <section class="experience-page">
         <nav>
-            <div class="logo">
+            <div class="contacts-wrapper">
                 <div class="contacts">
                     <a href="https://github.com/Pitcherrr" target="_blank" rel="noopener noreferrer">
                         <img src="./assets/github-mark-white.svg" alt="logo">
@@ -34,7 +34,7 @@
                 <h2>Tom Pitcher</h2>
             </div>
             <div class = "dark-mode">
-                <button id = "dark-mode-button" onclick="dark_mode()">Dark Mode</button>
+                <button class = "dark-mode-button" onclick="dark_mode()">Dark Mode</button>
             </div>
 
             <div class="links">
@@ -87,64 +87,63 @@
             </ul>
         </div>
     </section>
-    <div class = "exp-center">
+    <div class = "projects-center">
         <div class = "dark-mode-ios">
-            <button id = "dark-mode-button" onclick="dark_mode()">Dark Mode</button>
+            <button class = "dark-mode-button" onclick="dark_mode()">Dark Mode</button>
         </div>
-        <section class="experience-body">
+        <section class="project-1">
             <div>
-                <div class="header">
-                    <h3>Herrenknecht Australia</h3>
-                    <h3>Undergraduate Engineer</h3>
-                    <h3>08/2022 to Present</h3>
+                <div class="header-2">
+                    <h2>Active Search</h2>
+                    <h3>Rienforcement Learning for Search and Grasp in Clutter</h3>
                 </div>
-                <div class = "hk">
-                    <img src="assets/Herrenknecht_logo.png" alt="HK Logo">
-                    <div>
-                        <ul>
-                            <li> Provided high-quality engineering services for multiple major tunnelling projects across Australia, including Cross River Rail, Sydney Metro, and West Gate Melbourne.</li>
-                            <li> Responsible for contributing to mechanical design and prototyping using CAD, designing electrical systems, programming PLCs, procuring off the shelf and manufactured parts, and effectively communicating with clients to ensure project success.</li>
-                            <li> Gained a strong understanding of the complexities and challenges of tunnelling projects, and I was able to make valuable contributions to each project's success.</li>
-                        </ul> 
-                    </div>
+                <div class = "project-1-text">
+                    <ul>
+                        <li> Engineering honours thesis project on new methods of Reinforcement Learning to enable robotic manipulators to navigate and acquire target objects in cluttered and unstructured environments.</li>
+                        <li> Applying deep reinforcement learning to point cloud data from an Intel RealSense depth camera mounted on a Franka Panda robotic arm within UQ robotics perception planning and Leaning lab under the supervision of Dr Jen-Jen Chung.</li>
+                    </ul> 
+                </div>
+                <div class = "project-1-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2hE_cxcncTU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class = "project-1-img">
+                    <img src="assets/robot.png" alt="robot">
+                    <img src="assets/project-1/tsdf.png" alt="robot">
+                    <img src="assets/project-1/nbv.png" alt="robot">
+                    <svg  onclick="drop_down(1)" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z" fill="#ffffff"/>
+                    </svg>
                 </div>
             </div>
+        </section>
+        <section class="project-2">
             <div>
-                <div class="header">
-                    <h3>The University of Queensland</h3>
-                    <h3>Academic Tutor</h3>
-                    <h3>02/2023 to Present</h3>
+                <div class="header-2">
+                    <h2>Tractor Pull</h2>
+                    <h3>High Torque Electric Vehicle</h3>
                 </div>
-                <div class = "uq">
-                    <img src="assets/university-of-queensland-squarelogo.png" alt="UQ Logo">
-                    <div>
-                        <ul>
-                            <li> Leading tutorials and laboratory exercises for 3rd year electrical engineering students in ELEC3004: Signals, Systems, and Control.</li>
-                            <li> Creating learning content through TeX, MATLAB and embedded system programming to reinforce understanding of key topics.</li>
-                        </ul>
-                    </div>
+                <div class = "project-2-text">
+                    <ul>
+                        <li> Created a battery powered brushless motor vehicle weighing less than 10kg capable of pulling a 70kg sled up a slope.</li>
+                        <li> Calculated and constructed an electrical drive system capable of outputting 100Nm at the wheels.</li>
+                        <li> Utilized advanced manufacturing techniques to create precision parts from CNC, laser cutting, 3D printing and lathes.</li>
+                    </ul> 
                 </div>
-            </div>
-            <div>
-                <div class = "header">
-                    <h3>A-Team Tuition</h3>
-                    <h3>Academic Tutor</h3>
-                    <h3>01/2021 to 08/2022</h3>
+                <div class = "project-2-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FGzIAXEYyK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-                <div class="a-team">
-                    <img src="assets/A Team Tuition Logo Files-14 (1).png" alt="A-Team Logo">
-                    <div>
-                        <ul>
-                            <li> Tutoring specialists and methods mathematics, physics, and chemistry to a wide range of students ensuring effective and efficient learning. Writing weekly reports on learning goals and progress and communicating with parents and teachers.</li>
-                            <li> Led a tutor group of high achieving Marist College boarding students inspiring collaboration and active learning through engaging activities.</li>
-                        <ul>
-                    </div>
+                <div class = "project-2-img">
+                    <img src="assets/project-2/IMG_2863.jpg" alt="robot">
+                    <img src="assets/project-2/gearbox.png" alt="robot">
+                    <img src="assets/project-2/mech3100team.jpg" alt="robot">
+                    <svg  onclick="drop_down(2)" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z" fill="#ffffff"/>
+                    </svg>
                 </div>
             </div>
         </section>
     </div>
-    <section class="classes">
-    </section>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" integrity="sha512-A64Nik4Ql7/W/PJk2RNOmVyC/Chobn5TY08CiKEX50Sdw+33WTOpPJ/63bfWPl0hxiRv1trPs5prKO8CpA7VNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./script.js"></script>

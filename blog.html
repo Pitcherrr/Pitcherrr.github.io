@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./transitions.css">
+    <link rel="shortcut icon" href="assets/detective_scaled.png">
+    <title>Tom Pitcher</title>
+</head>
+<body>
+    <div class="transition transition-1 is-active"></div>
+    <section class="experience-page">
+        <nav>
+            <div class="contacts-wrapper">
+                <div class="contacts">
+                    <a href="https://github.com/Pitcherrr" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/github-mark-white.svg" alt="logo">
+                    </a>
+                    <a href="https://www.linkedin.com/in/tom-pitcher/" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/In-White-40.png" alt="logo">
+                    </a>
+                    <a href="mailto:tomhkpitcher@gmail.com">
+                        <img class = "mail" src="./assets/email-svgrepo-com.svg" alt="logo"> 
+                    </a>
+                </div>
+            </div>
+            <div class="exp-header">
+                <h2>Tom Pitcher</h2>
+            </div>
+            <div class = "dark-mode">
+                <button class = "dark-mode-button" onclick="dark_mode()">Dark Mode</button>
+            </div>
+
+            <div class="links">
+                <a href="/index.html">Home</a>
+                <a href="/experience.html">Experience</a>
+                <a href="/projects.html">Projects</a>
+                <a class = "active-2" href="/blog.html">Blog</a>
+            </div>
+            <div class = "nav-icon">
+                <svg
+                    width="44"
+                    height="18"
+                    viewBox="0 0 44 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                <line
+                    class="line"
+                    y1="1"
+                    x2="44"
+                    y2="1"
+                    stroke="white"
+                    stroke-width="2"
+                />
+                <line
+                    class="line"
+                    y1="9"
+                    x2="27"
+                    y2="9"
+                    stroke="white"
+                    stroke-width="2"
+                />
+                <line
+                    class="line"
+                    y1="17"
+                    x2="11"
+                    y2="17"
+                    stroke="white"
+                    stroke-width="2"
+                />
+                </svg>
+            </div>   
+        </nav>
+        <div class="menu-bar-2">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/experience.html">Experience</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li class="active"><a href="/blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class = "projects-center">
+        <div class = "dark-mode-ios">
+            <button class = "dark-mode-button" onclick="dark_mode()">Dark Mode</button>
+        </div>
+        <section class="blog-1">
+            <div>
+                <div class="header-2">
+                    <h2>The DFT and Circles</h2>
+                    <h3>If you can rotate a line you can compute a DFT</h3>
+                </div>
+                <div class = "blog-1-text">
+                    <h1>
+                    \[\text{Say we want to find the DFT of the following signal:}\]
+                    \begin{flalign*}
+                        x[n] &= [1, 0, -1, 0]
+                    \end{flalign*}
+                    \[\text{The DFT is defined as:}\]
+                    \begin{flalign*}
+                        X_k &= \sum_{n=0}^{N-1} x[n] e^{\frac{-2 \pi j}{N}k\,n}\\
+                        \text{For}\, X_{0\rightarrow N},\,\, e^{\frac{-2 \pi j}{N}k\,n} &= 
+                        [e^{\frac{-2 \pi j}{4}\times0\times n}, 
+                        e^{\frac{-2 \pi j}{4}n}, 
+                        e^{\frac{-2 \pi j}{4}2n}, 
+                        e^{\frac{-2 \pi j}{4}3n}]\\
+                        &= [1, 
+                        e^{\frac{-\pi j}{2}n}, 
+                        e^{-\pi j\,n}, 
+                        e^{\frac{-3 \pi j}{2}n}]
+                    \end{flalign*}
+                        \[\text{We can change these values to relations around the unit circle, note this is in degrees:}\]
+                    \begin{flalign*}
+                        &= [0^o, 
+                        (-90\times n) ^o, 
+                        (-180\times n) ^o, 
+                        (-270 \times n) ^o]\\
+                    \end{flalign*}
+                        \[\text{Now we treat pulses of x[n] as phasors around a circle:}\]
+                    \begin{flalign*}
+                        x[n] &= [1\angle 0^o, 0, 1 \angle 180^o, 0]
+                    \end{flalign*}
+                        \[\text{It is now much easier to complete the DFT as you are just rotating phasors around a circle:}\]
+                        \[\text{Solving the DFT:}\]
+                    \begin{flalign*}
+                        X_0 &= (1\angle 0^o \times \angle0^o) + 0 + (1 \angle180^o \times \angle0^o) + 0 = 0\\
+                        X_1 &= (1\angle 0^o \times \angle0^o) + 0 + (1 \angle180^o \times \angle-180^o) + 0 = 2\\
+                        X_2 &= (1\angle 0^o \times \angle0^o) + 0 + (1 \angle180^o \times \angle-360^o) + 0 = 0\\
+                        X_3 &= (1\angle 0^o \times \angle0^o) + 0 + (1 \angle180^o \times \angle-540^o) + 0 = 2\\
+                        \text{So we have, } X &= [0, 2, 0, 2]
+                    \end{flalign*}
+                    </h1>
+                    <!-- <ul>
+                        <li> Engineering honours thesis project on new methods of Reinforcement Learning to enable robotic manipulators to navigate and acquire target objects in cluttered and unstructured environments.</li>
+                        <li> Applying deep reinforcement learning to point cloud data from an Intel RealSense depth camera mounted on a Franka Panda robotic arm within UQ robotics perception planning and Leaning lab under the supervision of Dr Jen-Jen Chung.</li>
+                    </ul>  -->
+                </div>
+                <div class = "blog-1-img">
+                    <img src="assets/signal.png" alt="fftw">
+                    <svg  onclick="drop_down(3)" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z" fill="#ffffff"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" integrity="sha512-A64Nik4Ql7/W/PJk2RNOmVyC/Chobn5TY08CiKEX50Sdw+33WTOpPJ/63bfWPl0hxiRv1trPs5prKO8CpA7VNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
