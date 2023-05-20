@@ -90,7 +90,7 @@ function drop_down(n) {
         console.log('blog dropdown')
         var element1 = document.querySelector('.blog-1-text');
         var element2 = document.querySelector('.blog-1-img');
-        var elements = [element1, elements];
+        var elements = [element1, element2];
     }
     else {
         var element1 = document.querySelector('.project-' + n + '-text');
