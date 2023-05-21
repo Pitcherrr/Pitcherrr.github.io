@@ -748,7 +748,7 @@ li.active::before {
 
 .blog-1-text h1{
     /* outline: red dashed 1px; */
-    font-size: 1.5vw;
+    font-size: min(1.5vw, 1rem);
 }
 
 .blog-1-img {
