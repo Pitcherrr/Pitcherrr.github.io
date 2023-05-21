@@ -26,12 +26,13 @@ if (window.matchMedia('(max-width: 767px)').matches) {
 else {
   // Code to execute when the screen width is > 767px
   gsap.set(videos, {opacity:0});
+//   loop over the iframes
   videos.forEach((iframe) => {
       ScrollTrigger.create({
           trigger:iframe,
-          start:"top center+=200",
+          start:"top center+=250",
           end:"bottom center",
-          markers: false,
+          markers: true,
           onEnter: () => {
               gsap.to(iframe, {opacity: 1})   
               gsap.to(".video-2", {opacity: 1})

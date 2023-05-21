@@ -811,7 +811,8 @@ li.active::before {
     /* outline: red dashed 1px; */
     width: 100%;
     max-width: 845px;
-    height: 80%;
+    height: 100%;
+    max-height: 1070px;
     border-radius: 1rem;
 }
 
