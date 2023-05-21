@@ -746,6 +746,11 @@ li.active::before {
     display: none;
 }
 
+.blog-1-text h1{
+    /* outline: red dashed 1px; */
+    font-size: 1.5vw;
+}
+
 .blog-1-img {
     display: flex;
     margin-top: 2rem;
@@ -786,19 +791,6 @@ li.active::before {
     margin: 0 auto;
     padding: 0;
     list-style: none;
-}
-
-.blog-1-text.dd ul{
-    margin-top: 2rem;
-    margin-left: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    gap: 2rem;
-}
-
-.blog-1-text.dd li{
-    gap: 2rem;
 }
 
 .blog-1-img.dd svg{
@@ -1046,7 +1038,9 @@ li.active::before {
 
     .blog-1-text h1{
         margin-top: 1rem;
-        font-size: 0.4rem;
+        /* font-size: 0.4rem; */
+        font-size: 0.3rem;
+        font-size: 1.5vw;
     }
 
     .blog-1-img img{
