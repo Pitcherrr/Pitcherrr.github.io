@@ -32,7 +32,7 @@ else {
           trigger:iframe,
           start:"top center+=250",
           end:"bottom center",
-          markers: true,
+          markers: false,
           onEnter: () => {
               gsap.to(iframe, {opacity: 1})   
               gsap.to(".video-2", {opacity: 1})
