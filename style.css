@@ -231,11 +231,13 @@ a.active {
 .about-text {
     width: 60%;
     min-width: 350px;
+    max-width: 650px;
 }
 
 .resume-button-wrapper {
     width: 60%;
     min-width: 350px;
+    max-width: 650px;
     align-items: start;
     margin-top: 1rem;
     /* justify-content: left; */
@@ -265,6 +267,7 @@ a.active {
 .media-text {
     width: 60%;
     min-width: 350px;
+    max-width: 650px;
 }
 
 .media img{
