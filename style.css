@@ -401,6 +401,18 @@ li.active::before {
 
 }
 
+.cat {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.cat ul {
+    margin-left: 5%;
+    color: var(--light);
+    font-size: 0.8rem;
+}
+
 .hk {
     display: flex;
     flex-direction: row;
