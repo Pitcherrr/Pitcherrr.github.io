@@ -191,18 +191,6 @@ a.active {
     border-bottom: 2px solid var(--light);
 }
 
-.active::before {
-    content: "";
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    top: 0;
-    left: 600;
-    height: 100%;
-    background-color: antiquewhite;
-    z-index: -1;
-}
-
 .front-page {
     min-height: 100vh;
     color: antiquewhite;
@@ -729,89 +717,6 @@ li.active::before {
     transform: rotate(180deg);
 }
 
-/* Blog page styling ################################################################################ */
-
-.blog-1 {
-    /* outline: blue dashed 1px; */
-    margin-top: 100px;
-    width: 80%;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 1000px;
-}
-.blog-1::before {
-    content: "";
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-    border-radius: 0.5rem;
-    background-color: rgb(0,0,0);
-    z-index: -1;
-}
-
-.blog-1-text {
-    display: none;
-}
-
-.blog-1-text h1{
-    /* outline: red dashed 1px; */
-    font-size: min(1.5vw, 1rem);
-}
-
-.blog-1-img {
-    display: flex;
-    margin-top: 2rem;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 10px;
-}
-
-.blog-1-img img{
-    height: 7rem;
-    object-fit:scale-down;
-    border-radius: 1rem;
-    
-}
-
-.blog-1-img svg{
-    margin-top: 5rem;
-    height: 2rem;
-    width: 2rem;
-    fill: white;
-    stroke: white;
-    cursor: pointer;
-    
-}
-
-.blog-1-img svg:hover {
-    background-color: rgba(0,0,0, 0.4);
-}
-
-.blog-1-text.dd {
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: white;
-    font-size: 0.5rem;
-    gap: 50px;
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-}
-
-.blog-1-img.dd svg{
-    transform: rotate(180deg);
-}
-
 /* Resume page styling ################################################################################ */
 .resume {
     /* outline: red dashed 1px; */
@@ -857,23 +762,6 @@ li.active::before {
 
 
 
-    .contacts-wrapper::before {
-    content: "";
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    top: -20px;
-    height: 100%;
-    width: 100%;
-    border-radius: 0.5rem;
-    background-color: var(--secondary-color);
-    z-index: -1;
-    padding: 20px;
-    }
-
-    
     .contacts-wrapper::before {
         content: "";
         position: absolute;
@@ -1048,24 +936,6 @@ li.active::before {
         
     }
 
-    .blog-1 {
-        margin-top: 0rem;
-    }
-
-    .blog-1-text h1{
-        margin-top: 1rem;
-        /* font-size: 0.4rem; */
-        font-size: 0.3rem;
-        font-size: 1.5vw;
-    }
-
-    .blog-1-img img{
-        width:  300px;
-        height: 7rem;
-        object-fit:scale-down;
-        border-radius: 1rem;
-    }
-
     .resume-pdf {
         /* outline: red dashed 1px; */
         width: 100%;
@@ -1222,8 +1092,7 @@ button:focus-visible,
     }
 
     .project-1,
-    .project-2,
-    .blog-1 {
+    .project-2 {
         width: 100%;
     }
 

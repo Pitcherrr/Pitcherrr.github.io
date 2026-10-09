@@ -82,18 +82,10 @@ window.onload = () => {
 //code for drop down
 function drop_down(n) {
     // console.log("Drop down for element "+n)
-    // condition for when on the blog page as does not have a video 
-    if (n == 3) {
-        // console.log('blog dropdown')
-        var element1 = document.querySelector('.blog-1-text');
-        var element2 = document.querySelector('.blog-1-img');
-        var elements = [element1, element2];
-    }
-    else {
-        var element1 = document.querySelector('.project-' + n + '-text');
-        var element2 = document.querySelector('.project-' + n + '-img');
-        var element3 = document.querySelector('.project-' + n + '-video');
-        var elements = [element1, element2, element3];}
+    var element1 = document.querySelector('.project-' + n + '-text');
+    var element2 = document.querySelector('.project-' + n + '-img');
+    var element3 = document.querySelector('.project-' + n + '-video');
+    var elements = [element1, element2, element3];
     //loop over the elements and fade them in 
     for (let i=0; i<elements.length; i++) {
         var element = elements[i];
