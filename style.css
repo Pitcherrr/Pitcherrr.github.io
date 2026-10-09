@@ -1094,3 +1094,176 @@ li.active::before {
     pointer-events: all;
 }
 
+/* Small layout repairs. Original visual treatment stays intact. */
+a:focus-visible,
+button:focus-visible,
+.nav-icon:focus-visible {
+    outline: 2px solid var(--main-color);
+    outline-offset: 4px;
+}
+
+.about button,
+.dark-mode button,
+.dark-mode-ios button {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.about button:hover,
+.dark-mode button:hover,
+.dark-mode-ios button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.videos iframe,
+.project-1-video iframe,
+.project-2-video iframe {
+    width: min(560px, 100%);
+    aspect-ratio: 16 / 9;
+    height: auto;
+}
+
+@media screen and (max-width: 767px) {
+    section {
+        padding: 1.25rem;
+    }
+
+    .front-page {
+        min-height: 52vh;
+    }
+
+    .main-img {
+        height: 52vh;
+    }
+
+    .about {
+        margin-top: -14vh;
+        padding-top: 2rem;
+    }
+
+    .about-text,
+    .resume-button-wrapper,
+    .media-text,
+    .videos,
+    .media img {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .about p {
+        font-size: 0.95rem;
+    }
+
+    .media img {
+        max-width: 560px;
+    }
+
+    .videos {
+        gap: 1rem;
+    }
+
+    .videos iframe {
+        margin-top: 0;
+    }
+
+    .links {
+        width: min(82%, 360px);
+        left: auto;
+        right: 0;
+        transform: translateX(110%);
+    }
+
+    .links a {
+        left: auto;
+    }
+
+    .experience-page {
+        min-height: 8rem;
+    }
+
+    .experience-body {
+        position: static;
+        width: 100%;
+        margin-top: 1.5rem;
+        gap: 3.5rem;
+    }
+
+    .exp-center {
+        padding: 0 1.25rem 3rem;
+    }
+
+    .header,
+    .header-2 {
+        gap: 0.35rem;
+    }
+
+    .header h2,
+    .header-2 h2 {
+        font-size: 1.05rem;
+    }
+
+    .header h3,
+    .header-2 h3 {
+        font-size: 0.75rem;
+    }
+
+    .cat ul,
+    .hk ul,
+    .uq ul,
+    .a-team ul {
+        margin-left: 0;
+        padding-left: 1.2rem;
+        font-size: 0.8rem;
+    }
+
+    .projects-center {
+        padding: 0 1.25rem 3rem;
+        gap: 2rem;
+    }
+
+    .project-1,
+    .project-2,
+    .blog-1 {
+        width: 100%;
+    }
+
+    .project-1-text.dd,
+    .project-2-text.dd {
+        gap: 1rem;
+        padding: 0 1rem 1.5rem;
+    }
+
+    .project-1-text.dd ul,
+    .project-2-text.dd ul {
+        gap: 1rem;
+        margin: 1rem 0 0;
+        padding-left: 1rem;
+    }
+
+    .project-1-video.dd,
+    .project-2-video.dd {
+        padding: 0 1rem 1rem;
+    }
+
+    .resume {
+        margin-top: 1.5rem;
+        height: calc(100vh - 10rem);
+        padding: 0 1rem 1rem;
+    }
+
+    .resume-pdf {
+        height: 100%;
+        max-height: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+

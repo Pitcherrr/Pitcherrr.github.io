@@ -3,9 +3,9 @@
 
 //Mobile pop out menu bar
 const burger = document.querySelector(".nav-icon")
-burger.addEventListener("click", () => {
+burger?.addEventListener("click", () => {
     if(burger.classList.contains("on")){
-        gsap.to(".links", {x: "100%"});
+        gsap.to(".links", {x: "110%"});
         gsap.set('body',{overflow:"auto"})
         gsap.set('body',{overflowX:"hidden"})
     }else{
@@ -20,10 +20,7 @@ burger.addEventListener("click", () => {
 
 //Code for only showing youtube videos when viewing on larger devices as on smaller devices the start points are altered
 const videos = [".video-1",".video-2"];
-if (window.matchMedia('(max-width: 767px)').matches) {
-  console.log('Mobile View Active');
-} 
-else {
+if (!window.matchMedia('(max-width: 767px)').matches) {
   // Code to execute when the screen width is > 767px
   gsap.set(videos, {opacity:0});
 //   loop over the iframes
@@ -72,7 +69,7 @@ window.onload = () => {
         
         anchor.addEventListener('click', e=> {
             e.preventDefault();
-            let target = e.target.href;
+            let target = anchor.href;
             transition_el.classList.add('is-active');
 
             setTimeout(() => {
